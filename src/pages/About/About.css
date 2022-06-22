@@ -1,0 +1,61 @@
+.about-section {
+  height: 80vh;
+  background-color: rgba(12, 0, 32, 0.6);
+  color: #fff;
+}
+.about-wrapper {
+  width: 100%;
+  height: 100%;
+  background: url(../../images/net-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.about-img-wrapper {
+  width: 350px;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.about-img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.about-content {
+  width: 45%;
+  gap: 1.8em;
+}
+.about-content .about-heading h1 {
+  font-size: 2.3rem;
+  font-family: raleway;
+}
+.about-content .about-text p,
+.about-content .about-text-list ul li {
+  font-family: tisa-light;
+  letter-spacing: 1px;
+}
+.about-content .about-text-list ul {
+  gap: 0.6em;
+}
+.about-content .about-text-list ul li {
+  list-style: disc;
+  margin-left: 1em;
+}
+.about-content .about-btns {
+  gap: 1.5em;
+}
+.about-content .about-btns .about-btn {
+  padding: 9px 1.8em;
+  font-weight: bold;
+}
+.about-content .about-btns .whtiepaper-btn {
+  color: #000 !important;
+}
+.about-content .about-btns .novanomics-btn{
+  background: transparent;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.about-content .about-btns .novanomics-btn:hover{
+  background: rgba(255,255,255,0.2);
+}
+

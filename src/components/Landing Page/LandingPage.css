@@ -1,0 +1,61 @@
+.landing-wrapper{
+    height: calc(100vh - 80px);
+    color: #fff;
+}
+
+/* .landing-wrapper,
+.landing-wrapper *{
+    border: 1px solid red;
+} */
+
+.left-heading-container{
+    gap:  1.5em;
+}
+.main-heading h1{
+    font-family: raleway;
+    letter-spacing: 2px;
+    font-size: 3.85rem;
+
+}
+.mint-count-heading{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: bebas !important;
+}
+.mint-count-heading span{
+    font-size: 2rem;
+}
+.opt-btns{
+    gap: 2em;
+    margin-top: 2em;
+}
+.opt-btn{
+    background: #fff;
+    color: rgb(5, 5, 5);
+    gap: 1em;
+    padding: 8px 1.8em;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.opt-btn-icon{
+    color: rgb(5, 5, 5)!important;
+}
+.wallet-btn{
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.wallet-btn:hover{
+    background: rgba(255,255,255,0.3);
+}
+
+.right-image-container .image-wrapper{
+    width: 25em;
+    height: 25em;
+}
+.right-image-container .image-wrapper img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
