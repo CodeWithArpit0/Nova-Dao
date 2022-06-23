@@ -50,11 +50,3 @@ export const getNFTPrice = async () => {
   let result = await novaContract.methods.getNftPrice().call();
   return result;
 }
-
-const struct = {
-  struct2: {
-    name: "Arpit",
-    roll: 5
-  },
-  arr: [1, 1, 1, 1]
-}
