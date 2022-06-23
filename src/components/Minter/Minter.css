@@ -37,71 +37,116 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.mint-model .close-model-btn{
-    width: 100%;
-    margin-right: 3em;
+.mint-model .close-model-btn {
+  width: 100%;
+  margin-right: 3em;
 }
-.mint-model .close-model-btn button{
-    background: transparent;
-    font-size: 1.1em;
-    color: rgb(231, 231, 231);
-    cursor: pointer;
+.mint-model .close-model-btn button {
+  background: transparent;
+  font-size: 1.1em;
+  color: rgb(231, 231, 231);
+  cursor: pointer;
 }
-.mint-model .close-model-btn button:hover{
-    color: rgb(190, 190, 190);
+.mint-model .close-model-btn button:hover {
+  color: rgb(190, 190, 190);
 }
-.model-wrapper{
-    width: 25%;
-    height: 70vh;
-    background-color: #fff;
-    border-radius: 10px;
+.model-wrapper {
+  width: 25%;
+  height: 70vh;
+  background-color: #fff;
+  border-radius: 10px;
 }
-.model-image{
-    width: 120px;
-    height: 120px;
+.model-image {
+  width: 120px;
+  height: 120px;
 }
-.model-image img{
-    width: 100%;
-    height: 100%;
+.model-image img {
+  width: 100%;
+  height: 100%;
 }
-.nft-minted-heading h1{
-    color: #000;
-    font-family: bebas;
-    font-weight: 500;
-    font-size: 1.8em;
+.nft-minted-heading h1 {
+  color: #000;
+  font-family: bebas;
+  font-weight: 500;
+  font-size: 1.8em;
 }
-.counter{
-    border: 1px solid rgb(5,5,5);
+.counter {
+  border: 1px solid rgb(5, 5, 5);
 }
-.counter button{
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 8px 14px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(5,5,5);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+.counter button {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 8px 14px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(5, 5, 5);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-.counter button:hover{
-    background-color: rgb(5,5,5);
-    color: #fff;
+.counter button:hover {
+  background-color: rgb(5, 5, 5);
+  color: #fff;
 }
-.counter input{
-    font-size: 1.4em;
-    width: 3em;
-    height: 100%;
-    text-align: center;
-    padding: 10px 0;
-    color: rgb(5,5,5);
-    font-weight: bold;
+.counter input {
+  font-size: 1.4em;
+  width: 3em;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: rgb(5, 5, 5);
+  font-weight: bold;
 }
-.nft-mint-btn button{
-    padding: 9px 1.8em;
-    color: #fff;
-    font-size: 1.1em;
-    background-color: rgb(5,5,5);
-    cursor: pointer;
+.nft-mint-btn .mint-btn {
+  padding: 9px 1.8em;
+  color: #fff;
+  font-size: 1.1em;
+  background-color: rgb(5, 5, 5);
+  cursor: pointer;
+}
+.nftHashBox {
+  padding-left: 10px;
+  background-color: rgba(134, 134, 134, 0.2);
+  color: rgb(5, 5, 5);
+  border-radius: 6px;
+}
+.nftHashBox,
+.error-box {
+  margin-top: 1em;
+}
+.copy-hash-btn {
+  padding: 0;
+  padding: 8px;
+  color: #fff;
+  font-size: 13px;
+  background-color: rgb(5, 5, 5);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.copy-hash-btn:hover {
+  background-color: rgb(46, 46, 46);
+}
+.error-icon {
+  color: rgb(255, 60, 60);
+}
+.error-box {
+  width: 15em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: rgba(248, 38, 38, 0.2);
+  color: rgb(255, 60, 60);
+}
+.error{
+  font-size: 12px;
+}
+.error-caution-icon{
+  font-size: 26px;
+}
+.error-close-icon {
+  font-size: 11px;
+}
+.error-close-btn{
+  background: transparent;
+  cursor: pointer;
 }

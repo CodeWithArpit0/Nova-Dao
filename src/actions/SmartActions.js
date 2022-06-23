@@ -1,5 +1,6 @@
 import novaContract from "../utils/nova-connection";
 import web3 from "../web3"
+import { getUserAddress } from "./Web3Actions";
 
 export const getUserTokenBalance = async (address) => {
   let response = await novaContract.methods.name().call();
@@ -17,27 +18,43 @@ export const mintNft = async (nftQuantity) => {
     web3.utils.toWei(finalCost.toString(), 'ether')
   );
   //const chainID=checkCorrectNetwork();
+
+  const WalletAddress = await getUserAddress();
   const nftObject = {
-    from: "0x7F74176F143699a78D4D186C1061A995b9012854",
+    from: WalletAddress,
     to: "0xe693d5342ea38cba9e3999d94a462520705dcfd2",
     data: nftObj,
     value: amount,
     chainId: 3,
   };
+
+  var response = { code: null, message: null };
   try {
     const txHash = await window.ethereum.request({
       method: 'eth_sendTransaction',
       params: [nftObject],
-    });
+    })
     console.log('txhash of nft', txHash);
-    return txHash;
-  } catch (e) {
-    //console.log('catch', e);
-    return null;
+    response.code = 200;
+    response.message = txHash;
+    return response;
+  } catch (err) {
+    // console.log('catch', e);
+    response.code = err.code;
+    response.message = err.message;
+    return response;
   }
 }
 
 export const getNFTPrice = async () => {
   let result = await novaContract.methods.getNftPrice().call();
   return result;
+}
+
+const struct = {
+  struct2: {
+    name: "Arpit",
+    roll: 5
+  },
+  arr: [1, 1, 1, 1]
 }
