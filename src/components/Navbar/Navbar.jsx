@@ -71,7 +71,7 @@ export default function Navbar() {
             >
               <BiUserCircle className="nav-btn-icon" />
             </button>
-            <div className="user-dropdown">
+            {/* <div className="user-dropdown">
               <div className="dropdown-wrapper">
                 <ul>
                   <li>Profile</li>
@@ -79,7 +79,7 @@ export default function Navbar() {
                   <li>Logout</li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         ) : (
           <button
@@ -87,7 +87,7 @@ export default function Navbar() {
             onClick={ConnectToMetaMask}
           >
             <IoMdWallet className="nav-btn-icon" />
-            Connect
+            &nbsp;Connect
           </button>
         )}
         <button className="nav-btn d-flex justify-center align-center f-gap-1">
