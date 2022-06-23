@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Nova-Dao/static/css/main.3a4f7e26.css",
-    "main.js": "/Nova-Dao/static/js/main.ce518dfd.js",
+    "main.css": "/Nova-Dao/static/css/main.ccda447f.css",
+    "main.js": "/Nova-Dao/static/js/main.a659b165.js",
     "static/media/bg3.png": "/Nova-Dao/static/media/bg3.424784221492cb148fd8.png",
     "static/media/Raleway.ttf": "/Nova-Dao/static/media/Raleway.3fefe681f4c62116679b.ttf",
     "static/media/Tisa Sans Pro Light.ttf": "/Nova-Dao/static/media/Tisa Sans Pro Light.77765de353a76f48e13d.ttf",
@@ -18,11 +18,11 @@
     "static/media/Bebas.ttf": "/Nova-Dao/static/media/Bebas.90dabffdfc7cafc45f81.ttf",
     "static/media/blob.png": "/Nova-Dao/static/media/blob.9a4243bb62371b7ec708.png",
     "index.html": "/Nova-Dao/index.html",
-    "main.3a4f7e26.css.map": "/Nova-Dao/static/css/main.3a4f7e26.css.map",
-    "main.ce518dfd.js.map": "/Nova-Dao/static/js/main.ce518dfd.js.map"
+    "main.ccda447f.css.map": "/Nova-Dao/static/css/main.ccda447f.css.map",
+    "main.a659b165.js.map": "/Nova-Dao/static/js/main.a659b165.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a4f7e26.css",
-    "static/js/main.ce518dfd.js"
+    "static/css/main.ccda447f.css",
+    "static/js/main.a659b165.js"
   ]
 }
