@@ -1,19 +1,28 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./Minter.css";
 import modelImage from "../../images/blob.png";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { FaEthereum } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { BiErrorCircle } from "react-icons/bi";
+import { MdFileCopy, MdOutlineFileCopy } from "react-icons/md";
 import { mintNft } from "../../actions/SmartActions";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { getUserAddress, getWalletBalance } from "../../actions/Web3Actions";
 
 export default function Minter() {
   const mintNFTBtnRef = useRef();
   const [nftQTY, setNftQty] = useState(1);
   const [model, setModel] = useState(false);
-  const [nftHash, setNftHash] = useState("0xe693d5342ea38cba9e3999d94a462520705dcfd2");
+  const [nftHash, setNftHash] = useState(
+    "0xe693d5342ea38cba9e3999d94a462520705dcfd2"
+  );
   const [hashCopied, setHashCopied] = useState(false);
+  const [addressCopied, setAddressCopied] = useState(false);
+  const [wallet, setWallet] = useState({
+    walletAddress: null,
+    walletBalance: 0,
+  });
   const [error, setError] = useState({
     error: false,
     msg: "",
@@ -25,6 +34,15 @@ export default function Minter() {
       setNftQty(val);
     }
   };
+
+  useEffect(() => {
+    async function initializeWallet() {
+      const walletAddress = await getUserAddress();
+      const walletBalance = await getWalletBalance();
+      setWallet({ walletAddress: walletAddress, walletBalance: walletBalance });
+    }
+    initializeWallet();
+  }, []);
 
   const handleNftMintBtn = () => {
     setBtnText("Minting...");
@@ -75,8 +93,28 @@ export default function Minter() {
               </button>
             </div>
             <div className="model-wrapper d-flex flex-column justify-center align-center f-gap-5">
-              <div className="model-image">
-                <img src={modelImage} />
+              <div className="profile-box d-flex flex-column jusitfy-center align-center f-gap-2">
+                <div className="model-image">
+                  <img src={modelImage} />
+                </div>
+                <div className="wallet-address d-flex justify-between align-center f-gap-1">
+                  <p>
+                    {wallet.walletAddress.slice(0, 16)}
+                    ...
+                  </p>
+                  <CopyToClipboard
+                    text={wallet.walletAddress}
+                    onCopy={() => setAddressCopied(true)}
+                  >
+                    <button className="copy-address-btn">
+                      {addressCopied ? (
+                        <MdFileCopy className="copy-icon" />
+                      ) : (
+                        <MdOutlineFileCopy className="copy-icon" />
+                      )}
+                    </button>
+                  </CopyToClipboard>
+                </div>
               </div>
               <div className="nft-minted-heading">
                 <h1>0 / 7500 Minted</h1>
