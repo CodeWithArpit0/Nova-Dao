@@ -14,9 +14,7 @@ export default function Minter() {
   const mintNFTBtnRef = useRef();
   const [nftQTY, setNftQty] = useState(1);
   const [model, setModel] = useState(false);
-  const [nftHash, setNftHash] = useState(
-    "0xe693d5342ea38cba9e3999d94a462520705dcfd2"
-  );
+  const [nftHash, setNftHash] = useState(null);
   const [hashCopied, setHashCopied] = useState(false);
   const [addressCopied, setAddressCopied] = useState(false);
   const [wallet, setWallet] = useState({
@@ -92,7 +90,7 @@ export default function Minter() {
                 <ImCross />
               </button>
             </div>
-            <div className="model-wrapper d-flex flex-column justify-center align-center f-gap-5">
+            <div className="model-wrapper d-flex flex-column justify-center align-center f-gap-4">
               <div className="profile-box d-flex flex-column jusitfy-center align-center f-gap-2">
                 <div className="model-image">
                   <img src={modelImage} />
